@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Control de Inasistencias · SENA</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="hc hc1"></div>
+  <div class="hc hc2"></div>
+  <div class="hc hc3"></div>
+  <div class="header-badge"><i class="fas fa-shield-alt"></i> Solución Institucional SENA</div>
+  <img src="assets/img/logo-sena-negro.png" alt="SENA" onerror="this.style.display='none'">
+  <h1>Sistema de Control<br>de Inasistencias</h1>
+  <p>Gestión eficiente de asistencia, seguimiento académico y reportes automatizados para instituciones educativas.</p>
+  <a href="#contacto" class="header-cta"><i class="fas fa-paper-plane"></i> Solicitar Demo Gratuita</a>
+</div>
+
+<!-- NAV STICKY -->
+<div class="nav-sticky">
+  <div class="progress-line" id="pline"></div>
+  <nav class="nav-inner">
+    <button class="nav-tab active" data-section="problematica">Problemática</button>
+    <button class="nav-tab" data-section="solucion">Solución</button>
+    <button class="nav-tab" data-section="caracteristicas">Características</button>
+    <button class="nav-tab" data-section="beneficios">Beneficios</button>
+    <button class="nav-tab" data-section="precios">Planes</button>
+    <button class="nav-tab" data-section="contacto">Contacto</button>
+  </nav>
+</div>
+
+<div class="container">
+
+  <!-- 1. PROBLEMÁTICA -->
+  <div id="problematica" class="section">
+    <div class="sec-head">
+      <div class="sec-ico"><i class="fas fa-exclamation-triangle"></i></div>
+      <div class="sec-titles">
+        <h2>Problemática que Resolvemos</h2>
+        <p>Desafíos actuales en la gestión de asistencia institucional</p>
+      </div>
+    </div>
+    <div class="cards-grid">
+      <div class="card"><div class="card-ico"><i class="fas fa-calendar-times"></i></div><h4>Descontrol de Asistencia</h4><p>Falta de registro centralizado de inasistencias y justificaciones en un solo sistema.</p></div>
+      <div class="card"><div class="card-ico"><i class="fas fa-chart-line"></i></div><h4>Pérdida de Trazabilidad</h4><p>Sin historial de acciones remediales ni seguimiento a aprendices con competencias pendientes.</p></div>
+      <div class="card"><div class="card-ico"><i class="fas fa-file-excel"></i></div><h4>Reportes Manuales</h4><p>Generación de reportes en Excel de forma tediosa, lenta y propensa a errores humanos.</p></div>
+      <div class="card"><div class="card-ico"><i class="fas fa-users-slash"></i></div><h4>Desarticulación</h4><p>Comunicación deficiente entre instructores, directores y coordinación académica.</p></div>
+    </div>
+    <div class="sec-nav">
+      <button class="btn-sec btn-prev inv">← Anterior</button>
+      <div class="step-info"><span class="step-lbl" id="lbl-0">1 de 6</span><div class="step-dots" id="dots-0"></div></div>
+      <button class="btn-sec btn-next" data-dir="1">Siguiente <i class="fas fa-arrow-right"></i></button>
+    </div>
+  </div>
+
+  <!-- 2. SOLUCIÓN -->
+  <div id="solucion" class="section">
+    <div class="sec-head">
+      <div class="sec-ico"><i class="fas fa-lightbulb"></i></div>
+      <div class="sec-titles">
+        <h2>Nuestra Solución</h2>
+        <p>Un sistema diseñado específicamente para el SENA y otras instituciones educativas</p>
+      </div>
+    </div>
+    <p class="intro-text">Sistema integral para el control de inasistencias y seguimiento académico, diseñado con flujos de trabajo adaptados a los procesos formativos del SENA y sus dinámicas institucionales.</p>
+    <div class="cards-grid">
+      <div class="card"><div class="card-ico"><i class="fas fa-database"></i></div><h4>Gestión Centralizada</h4><p>Toda la información de aprendices, instructores y fichas en un solo lugar accesible.</p></div>
+      <div class="card"><div class="card-ico"><i class="fas fa-calendar-check"></i></div><h4>Control de Asistencia</h4><p>Registro de inasistencias por jornada con justificaciones y archivos adjuntos digitales.</p></div>
+      <div class="card"><div class="card-ico"><i class="fas fa-chart-pie"></i></div><h4>Reportes Automatizados</h4><p>Generación automática de reportes en Excel y PDF con formato oficial SENA.</p></div>
+      <div class="card"><div class="card-ico"><i class="fas fa-clipboard-check"></i></div><h4>Seguimiento de Pendientes</h4><p>Trazabilidad completa de competencias pendientes y acciones remediales por aprendiz.</p></div>
+    </div>
+    <div class="sec-nav">
+      <button class="btn-sec btn-prev" data-dir="-1"><i class="fas fa-arrow-left"></i> Anterior</button>
+      <div class="step-info"><span class="step-lbl" id="lbl-1">2 de 6</span><div class="step-dots" id="dots-1"></div></div>
+      <button class="btn-sec btn-next" data-dir="1">Siguiente <i class="fas fa-arrow-right"></i></button>
+    </div>
+  </div>
+
+  <!-- 3. CARACTERÍSTICAS -->
+  <div id="caracteristicas" class="section">
+    <div class="sec-head">
+      <div class="sec-ico"><i class="fas fa-cogs"></i></div>
+      <div class="sec-titles">
+        <h2>Características Principales</h2>
+        <p>Módulos funcionales del sistema y sus beneficios directos</p>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table class="tbl">
+        <thead><tr><th>Módulo</th><th>Funcionalidad</th><th>Beneficio</th></tr></thead>
+        <tbody>
+          <tr><td>Gestión de Usuarios</td><td>Roles: Admin, Instructor, Aprendiz</td><td>Acceso seguro y controlado por perfil</td></tr>
+          <tr><td>Gestión de Fichas</td><td>CRUD completo de fichas de formación</td><td>Organización por grupos y programas</td></tr>
+          <tr><td>Control de Inasistencias</td><td>Registro por fecha, jornada y horas</td><td>Precisión en el seguimiento académico</td></tr>
+          <tr><td>Justificaciones</td><td>Adjuntar documentos PDF e imágenes</td><td>Digitalización de excusas médicas</td></tr>
+          <tr><td>Reportes Oficiales</td><td>Excel y PDF con formato SENA</td><td>Documentación institucional estandarizada</td></tr>
+          <tr><td>Seguimiento de Pendientes</td><td>Competencias y resultados pendientes</td><td>Trazabilidad completa del proceso</td></tr>
+          <tr><td>Acciones Remediales</td><td>Tutorías, nivelaciones y planes</td><td>Historial de intervenciones académicas</td></tr>
+          <tr><td>Grupos de Aseo</td><td>Asignación de días de limpieza</td><td>Organización de responsabilidades</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="sec-nav">
+      <button class="btn-sec btn-prev" data-dir="-1"><i class="fas fa-arrow-left"></i> Anterior</button>
+      <div class="step-info"><span class="step-lbl" id="lbl-2">3 de 6</span><div class="step-dots" id="dots-2"></div></div>
+      <button class="btn-sec btn-next" data-dir="1">Siguiente <i class="fas fa-arrow-right"></i></button>
+    </div>
+  </div>
+
+  <!-- 4. BENEFICIOS -->
+  <div id="beneficios" class="section">
+    <div class="sec-head">
+      <div class="sec-ico"><i class="fas fa-chart-bar"></i></div>
+      <div class="sec-titles">
+        <h2>Beneficios para la Institución</h2>
+        <p>Impacto directo en eficiencia, calidad y cumplimiento normativo</p>
+      </div>
+    </div>
+    <div class="cards-grid">
+      <div class="card"><div class="card-ico"><i class="fas fa-clock"></i></div><h4>Ahorro de Tiempo</h4><p>Automatización de reportes y registro de información que antes tomaba horas manuales.</p></div>
+      <div class="card"><div class="card-ico"><i class="fas fa-search"></i></div><h4>Trazabilidad Total</h4><p>Historial completo e inmutable de cada aprendiz, sus inasistencias y justificaciones.</p></div>
+      <div class="card"><div class="card-ico"><i class="fas fa-tachometer-alt"></i></div><h4>Toma de Decisiones</h4><p>Estadísticas y métricas en tiempo real para una gestión académica más informada.</p></div>
+      <div class="card"><div class="card-ico"><i class="fas fa-award"></i></div><h4>Cumplimiento Normativo</h4><p>Reportes con formato oficial SENA, listos para auditorías y revisiones institucionales.</p></div>
+    </div>
+    <div class="sec-nav">
+      <button class="btn-sec btn-prev" data-dir="-1"><i class="fas fa-arrow-left"></i> Anterior</button>
+      <div class="step-info"><span class="step-lbl" id="lbl-3">4 de 6</span><div class="step-dots" id="dots-3"></div></div>
+      <button class="btn-sec btn-next" data-dir="1">Siguiente <i class="fas fa-arrow-right"></i></button>
+    </div>
+  </div>
+
+  <!-- 5. PRECIOS -->
+  <div id="precios" class="section">
+    <div class="sec-head">
+      <div class="sec-ico"><i class="fas fa-tags"></i></div>
+      <div class="sec-titles">
+        <h2>Planes y Precios</h2>
+        <p>Elige el plan que mejor se adapte a tu institución</p>
+      </div>
+    </div>
+    <div class="pricing-grid">
+      <div class="pcard">
+        <div class="p-ico"><i class="fas fa-building"></i></div>
+        <h3>Básico</h3>
+        <div class="price-tag"><small>Inversión única</small>$COP 1.500.000</div>
+        <ul>
+          <li><i class="fas fa-check ck"></i> Hasta 5 fichas de formación</li>
+          <li><i class="fas fa-check ck"></i> 3 usuarios administradores</li>
+          <li><i class="fas fa-check ck"></i> Reportes básicos incluidos</li>
+          <li><i class="fas fa-times cx"></i> <span class="dis">Seguimiento de pendientes</span></li>
+          <li><i class="fas fa-times cx"></i> <span class="dis">Soporte prioritario</span></li>
+        </ul>
+      </div>
+      <div class="pcard highlight">
+        <div class="p-badge">⭐ Más popular</div>
+        <div class="p-ico"><i class="fas fa-star"></i></div>
+        <h3>Profesional</h3>
+        <div class="price-tag"><small>Inversión única</small>$COP 3.500.000</div>
+        <ul>
+          <li><i class="fas fa-check ck"></i> Fichas ilimitadas</li>
+          <li><i class="fas fa-check ck"></i> Usuarios ilimitados</li>
+          <li><i class="fas fa-check ck"></i> Reportes avanzados (Excel/PDF)</li>
+          <li><i class="fas fa-check ck"></i> Seguimiento de pendientes</li>
+          <li><i class="fas fa-check ck"></i> Soporte prioritario 24/7</li>
+        </ul>
+      </div>
+      <div class="pcard">
+        <div class="p-ico"><i class="fas fa-cloud"></i></div>
+        <h3>Enterprise</h3>
+        <div class="price-tag"><small>Cotización personalizada</small>A convenir</div>
+        <ul>
+          <li><i class="fas fa-check ck"></i> Todo el plan Profesional</li>
+          <li><i class="fas fa-check ck"></i> Implementación on-premise</li>
+          <li><i class="fas fa-check ck"></i> Capacitación presencial</li>
+          <li><i class="fas fa-check ck"></i> Personalización del sistema</li>
+          <li><i class="fas fa-check ck"></i> API de integración propia</li>
+        </ul>
+      </div>
+    </div>
+    <div class="sec-nav">
+      <button class="btn-sec btn-prev" data-dir="-1"><i class="fas fa-arrow-left"></i> Anterior</button>
+      <div class="step-info"><span class="step-lbl" id="lbl-4">5 de 6</span><div class="step-dots" id="dots-4"></div></div>
+      <button class="btn-sec btn-next" data-dir="1">Siguiente <i class="fas fa-arrow-right"></i></button>
+    </div>
+  </div>
+
+  <!-- 6. CONTACTO -->
+  <div id="contacto" class="section">
+    <div class="sec-head">
+      <div class="sec-ico"><i class="fas fa-envelope"></i></div>
+      <div class="sec-titles">
+        <h2>¿Listo para implementarlo?</h2>
+        <p>Escríbenos y agenda una demo personalizada sin compromiso</p>
+      </div>
+    </div>
+    <div class="contact-box">
+      <p>Nuestro equipo te guiará paso a paso para adaptar el sistema a tu institución y resolverá todas tus dudas antes de tomar una decisión.</p>
+      <div class="contact-items">
+        <a href="tel:+573104142211" class="ci">
+          <div class="ci-ico"><i class="fas fa-phone-alt"></i></div>
+          <div class="ci-txt"><span>Teléfono</span><p>(+57) 310 414 2211</p></div>
+        </a>
+        <a href="mailto:tomasorregoberrio@gmail.com" class="ci">
+          <div class="ci-ico"><i class="fas fa-envelope"></i></div>
+          <div class="ci-txt"><span>Correo electrónico</span><p>tomasorregoberrio@gmail.com</p></div>
+        </a>
+        <a href="https://www.sena.edu.co" target="_blank" class="ci">
+          <div class="ci-ico"><i class="fas fa-globe"></i></div>
+          <div class="ci-txt"><span>Sitio web</span><p>www.sena.edu.co</p></div>
+        </a>
+      </div>
+      <a href="#" class="btn-demo" id="demoBtn">
+        <i class="fas fa-paper-plane"></i> Solicitar Demo Gratuita
+      </a>
+    </div>
+    <div class="sec-nav">
+      <button class="btn-sec btn-prev" data-dir="-1"><i class="fas fa-arrow-left"></i> Anterior</button>
+      <div class="step-info"><span class="step-lbl" id="lbl-5">6 de 6</span><div class="step-dots" id="dots-5"></div></div>
+      <button class="btn-sec btn-next inv"><i class="fas fa-check"></i> Finalizar</button>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p><strong>Sistema de Control de Inasistencias SENA</strong></p>
+  <p>Centro de Procesos Industriales y Construcción &nbsp;·&nbsp; © 2026 — Todos los derechos reservados</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
