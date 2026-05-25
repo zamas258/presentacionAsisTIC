@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual de Usuario - Sistema de Control de Inasistencias SENA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/styles/manual_usuario.css">
+</head>
+<body>
+    <!-- Portada -->
+    <div class="cover">
+        <img src="assets/img/logo-sena-negro.png" alt="Logo SENA">
+        <h1>Sistema de Control de Inasistencias</h1>
+        <h2>Manual de Usuario</h2>
+        <p>Versión 3.0</p>
+        <p>Centro de Procesos Industriales y Construcción</p>
+        <p>SENA - Regional Distrito Capital</p>
+        <div class="version">
+            <p>Documento elaborado: Abril 2024</p>
+            <p>© SENA - Todos los derechos reservados</p>
+        </div>
+    </div>
+
+    <!-- Contenido principal con índice lateral -->
+    <div class="manual-wrapper">
+        <!-- Índice lateral -->
+        <div class="sidebar">
+            <h3><i class="fas fa-list"></i> Contenido</h3>
+            <ul>
+                <li><a href="#introduccion">1. Introducción</a></li>
+                <li><a href="#objetivo">2. Objetivo del Sistema</a></li>
+                <li><a href="#finalidad">3. Finalidad y Alcance</a></li>
+                <li><a href="#requerimientos">4. Requerimientos</a></li>
+                <li><a href="#roles">5. Roles y Permisos</a></li>
+                <li><a href="#acceso">6. Acceso al Sistema</a></li>
+                <li><a href="#modulos">7. Módulos del Sistema</a></li>
+                <li><a href="#crud">8. Operaciones CRUD</a></li>
+                <li><a href="#reportes">9. Generación de Reportes</a></li>
+                <li><a href="#diccionario">10. Diccionario de Datos</a></li>
+                <li><a href="#conclusiones">11. Conclusiones</a></li>
+                <li><a href="#referencias">12. Referencias</a></li>
+                <li><a href="#extras">13. Extras</a></li>
+            </ul>
+        </div>
+
+        <!-- Contenido principal -->
+        <div class="main-content">
+            <!-- 1. Introducción -->
+            <div id="introduccion" class="section-manual">
+                <h2><i class="fas fa-info-circle"></i> 1. Introducción</h2>
+                <p>El Sistema de Control de Inasistencias es una aplicación web desarrollada para el SENA - Centro de Procesos Industriales y Construcción, diseñada para gestionar y controlar las inasistencias de los aprendices, realizar seguimiento a competencias pendientes y generar reportes oficiales.</p>
+                <br>
+                <p>Este manual proporciona una guía completa para el uso del sistema, dirigida a administradores, instructores y aprendices.</p>
+            </div>
+
+            <!-- 2. Objetivo del Sistema -->
+            <div id="objetivo" class="section-manual">
+                <h2><i class="fas fa-bullseye"></i> 2. Objetivo del Sistema</h2>
+                <p>Automatizar y centralizar el proceso de registro, control y seguimiento de inasistencias de los aprendices, permitiendo a los instructores y administradores llevar un control detallado y generar reportes institucionales.</p>
+            </div>
+
+            <!-- 3. Finalidad y Alcance -->
+            <div id="finalidad" class="section-manual">
+                <h2><i class="fas fa-question-circle"></i> 3. Finalidad y Alcance</h2>
+                <h3>¿Para qué se utiliza el sistema?</h3>
+                <ul style="margin-left: 20px; margin-bottom: 20px;">
+                    <li>Registrar inasistencias de aprendices por fecha, jornada y horas</li>
+                    <li>Adjuntar justificaciones y documentos de excusa</li>
+                    <li>Realizar seguimiento a competencias y resultados de aprendizaje pendientes</li>
+                    <li>Registrar acciones remediales (tutorías, nivelaciones, planes de mejoramiento)</li>
+                    <li>Generar reportes oficiales en Excel y PDF con formato SENA</li>
+                    <li>Gestionar fichas, aprendices e instructores</li>
+                    <li>Asignar grupos de aseo</li>
+                </ul>
+
+                <h3>¿Qué automatiza?</h3>
+                <ul style="margin-left: 20px;">
+                    <li>✅ Generación automática de reportes mensuales</li>
+                    <li>✅ Cálculo automático de total de horas de inasistencia por aprendiz</li>
+                    <li>✅ Notificación de primer acceso para cambio de contraseña</li>
+                    <li>✅ Asignación automática de usuario y contraseña al crear aprendices</li>
+                    <li>✅ Trazabilidad completa de acciones remediales</li>
+                </ul>
+            </div>
+
+            <!-- 4. Requerimientos -->
+            <div id="requerimientos" class="section-manual">
+                <h2><i class="fas fa-laptop-code"></i> 4. Requerimientos del Sistema</h2>
+                <div class="requirements-grid">
+                    <div class="requirement-card">
+                        <i class="fas fa-server"></i>
+                        <h4>Servidor</h4>
+                        <p>Apache 2.4+<br>PHP 7.4+<br>MySQL 5.7+</p>
+                    </div>
+                    <div class="requirement-card">
+                        <i class="fas fa-globe"></i>
+                        <h4>Navegadores</h4>
+                        <p>Chrome, Firefox, Edge, Safari (últimas versiones)</p>
+                    </div>
+                    <div class="requirement-card">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h4>Dispositivos</h4>
+                        <p>Computadoras, tablets, smartphones (responsive)</p>
+                    </div>
+                    <div class="requirement-card">
+                        <i class="fas fa-plug"></i>
+                        <h4>Conexión</h4>
+                        <p>Internet (mínimo 2 Mbps)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Roles y Permisos -->
+            <div id="roles" class="section-manual">
+                <h2><i class="fas fa-users-cog"></i> 5. Roles y Permisos</h2>
+                <table class="table-manual">
+                    <thead>
+                        <tr>
+                            <th>Rol</th>
+                            <th>Permisos</th>
+                            <th>Badge</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Administrador</strong></td>
+                            <td>Gestión completa: fichas, aprendices, instructores, usuarios, reportes, asignaciones</td>
+                            <td><span class="badge-rol badge-admin">ADMIN</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Instructor</strong></td>
+                            <td>Registro de inasistencias, ver aprendices de sus fichas, grupos de aseo (solo director)</td>
+                            <td><span class="badge-rol badge-instructor">INSTRUCTOR</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Aprendiz</strong></td>
+                            <td>Consultar sus inasistencias, ver instructores del día, su día de aseo</td>
+                            <td><span class="badge-rol badge-aprendiz">APRENDIZ</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- 6. Acceso al Sistema -->
+            <div id="acceso" class="section-manual">
+                <h2><i class="fas fa-sign-in-alt"></i> 6. Acceso al Sistema</h2>
+                <div class="screenshot">
+                    <div class="screenshot-placeholder">
+                        <i class="fas fa-camera" style="font-size: 48px;"></i>
+                        <p style="font-size: 12px;"><img src="login.png" alt=""></p>
+                    </div>
+                    <div class="screenshot-caption">Figura 1: Pantalla de inicio de sesión</div>
+                </div>
+                <h4>Credenciales de acceso:</h4>
+                <table class="table-manual">
+                    <thead>
+                        <tr><th>Rol</th><th>Usuario</th><th>Contraseña</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Administrador</td><td>admin</td><td>admin123</td></tr>
+                        <tr><td>Instructor</td><td>carlos</td><td>admin123</td></tr>
+                        <tr><td>Aprendiz</td><td>juan</td><td>admin123</td></tr>
+                    </tbody>
+                </table>
+                <p class="screenshot-caption" style="margin-top: 15px;">Nota: Los aprendices nuevos deben cambiar su contraseña en el primer inicio de sesión.</p>
+            </div>
+
+            <!-- 7. Módulos del Sistema -->
+            <div id="modulos" class="section-manual">
+                <h2><i class="fas fa-th-large"></i> 7. Módulos del Sistema</h2>
+                
+                <h3>7.1 Módulo de Administración</h3>
+                <div class="screenshot">
+                    <div class="screenshot-placeholder">
+                        <i class="fas fa-camera" style="font-size: 48px;"></i>
+                        <p><img src="adminm.png" alt=""></p>
+                    </div>
+                    <div class="screenshot-caption">Figura 2: Dashboard del Administrador</div>
+                </div>
+                <ul>
+                    <li><strong>Gestión de Fichas:</strong> Crear, editar, activar/desactivar fichas</li>
+                    <li><strong>Gestión de Aprendices:</strong> CRUD completo con foto de perfil</li>
+                    <li><strong>Gestión de Instructores:</strong> CRUD completo con foto de perfil</li>
+                    <li><strong>Asignación de Instructores:</strong> Asignar jornadas por fecha</li>
+                    <li><strong>Grupos de Aseo:</strong> Asignar días de aseo por ficha</li>
+                    <li><strong>Seguimiento de Pendientes:</strong> Control de competencias pendientes</li>
+                </ul>
+
+                <h3>7.2 Módulo del Instructor</h3>
+                <div class="screenshot">
+                    <div class="screenshot-placeholder">
+                        <i class="fas fa-camera" style="font-size: 48px;"></i>
+                        <p><img src="instructorr.png" alt=""></p>
+                    </div>
+                    <div class="screenshot-caption">Figura 3: Dashboard del Instructor</div>
+                </div>
+                <ul>
+                    <li><strong>Mis Fichas:</strong> Ver fichas asignadas</li>
+                    <li><strong>Registrar Inasistencias:</strong> Tabla calendario para registrar inasistencias</li>
+                    <li><strong>Mis Asignaciones:</strong> Ver jornadas asignadas</li>
+                    <li><strong>Grupos de Aseo:</strong> Asignar/editar días de aseo (solo directores)</li>
+                </ul>
+
+                <h3>7.3 Módulo del Aprendiz</h3>
+                <div class="screenshot">
+                    <div class="screenshot-placeholder">
+                        <i class="fas fa-camera" style="font-size: 48px;"></i>
+                        <p><img src="aprendizz.png" alt=""></p>
+                    </div>
+                    <div class="screenshot-caption">Figura 4: Dashboard del Aprendiz</div>
+                </div>
+                <ul>
+                    <li><strong>Mis Inasistencias:</strong> Historial de inasistencias</li>
+                    <li><strong>Instructores del Día:</strong> Ver instructores asignados por fecha</li>
+                    <li><strong>Grupos de Aseo:</strong> Ver día de aseo asignado</li>
+                    <li><strong>Mi Perfil:</strong> Editar información personal</li>
+                </ul>
+            </div>
+
+            <!-- 8. Operaciones CRUD -->
+            <div id="crud" class="section-manual">
+                <h2><i class="fas fa-database"></i> 8. Operaciones CRUD</h2>
+                <p>El sistema implementa operaciones CRUD (Create, Read, Update, Delete) en los siguientes módulos:</p>
+                
+                <table class="table-manual">
+                    <thead>
+                        <tr><th>Módulo</th><th>Crear</th><th>Leer</th><th>Actualizar</th><th>Eliminar</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Fichas</td><td>✅</td><td>✅</td><td>✅</td><td>✅ (Desactivar)</td></tr>
+                        <tr><td>Aprendices</td><td>✅</td><td>✅</td><td>✅</td><td>✅ (Desactivar)</td></tr>
+                        <tr><td>Instructores</td><td>✅</td><td>✅</td><td>✅</td><td>✅ (Desactivar)</td></tr>
+                        <tr><td>Inasistencias</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
+                        <tr><td>Acciones Remediales</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
+                        <tr><td>Grupos de Aseo</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>8.1 Ejemplo: Registrar una inasistencia</h3>
+                <div class="screenshot">
+                    <div class="screenshot-placeholder">
+                        <i class="fas fa-camera" style="font-size: 48px;"></i>
+                        <p><img src="registrarasistencia.png" alt=""></p>
+                    </div>
+                    <div class="screenshot-caption">Figura 5: Registro de inasistencia - Calendario</div>
+                </div>
+                <ol style="margin-left: 20px;">
+                    <li>Seleccione la ficha en el panel del instructor</li>
+                    <li>Haga clic en la celda correspondiente (fecha y jornada)</li>
+                    <li>Seleccione el aprendiz</li>
+                    <li>Ingrese el número de horas de inasistencia</li>
+                    <li>Adjunte documento de justificación (opcional)</li>
+                    <li>Haga clic en "Registrar Inasistencia"</li>
+                </ol>
+            </div>
+
+            <!-- 9. Generación de Reportes -->
+            <div id="reportes" class="section-manual">
+                <h2><i class="fas fa-chart-bar"></i> 9. Generación de Reportes</h2>
+                <div class="screenshot">
+                    <div class="screenshot-placeholder">
+                        <i class="fas fa-camera" style="font-size: 48px;"></i>
+                        <p><img src="reporte.png" alt=""></p>
+                    </div>
+                    <div class="screenshot-caption">Figura 6: Generación de reportes</div>
+                </div>
+                <p>El sistema permite exportar reportes en los siguientes formatos:</p>
+                <ul>
+                    <li><strong>Excel (.xls):</strong> Formato oficial SENA con todas las columnas</li>
+                    <li><strong>PDF (.pdf):</strong> Reporte profesional con formato institucional</li>
+                    <li><strong>CSV:</strong> Para análisis de datos externos</li>
+                </ul>
+                <p>Los reportes incluyen:</p>
+                <ul>
+                    <li>Listado completo de inasistencias por período</li>
+                    <li>Totales por aprendiz y por ficha</li>
+                    <li>Estadísticas de excusas y horas perdidas</li>
+                    <li>Firmas de instructores responsables</li>
+                </ul>
+            </div>
+
+            <!-- 10. Diccionario de Datos -->
+            <div id="diccionario" class="section-manual">
+                <h2><i class="fas fa-book"></i> 10. Diccionario de Datos</h2>
+                <table class="table-manual">
+                    <thead>
+                        <tr><th>Término</th><th>Definición</th><th>Ejemplo</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="dictionary-term">Ficha</td><td>Grupo de formación con código único</td><td>2502633</td></tr>
+                        <tr><td class="dictionary-term">Aprendiz</td><td>Estudiante matriculado en el SENA</td><td>Juan Pérez</td></tr>
+                        <tr><td class="dictionary-term">Instructor</td><td>Docente que imparte formación</td><td>Carlos Loaiza</td></tr>
+                        <tr><td class="dictionary-term">Inasistencia</td><td>Falta del aprendiz a una jornada de formación</td><td>4 horas</td></tr>
+                        <tr><td class="dictionary-term">Justificación</td><td>Documento que excusa la inasistencia</td><td>Excusa médica.pdf</td></tr>
+                        <tr><td class="dictionary-term">Acción Remedial</td><td>Actividad para recuperar competencias pendientes</td><td>Tutoría, nivelación</td></tr>
+                        <tr><td class="dictionary-term">Competencia</td><td>Capacidad que debe desarrollar el aprendiz</td><td>Programación orientada a objetos</td></tr>
+                        <tr><td class="dictionary-term">Jornada</td><td>Horario de formación (Mañana, Tarde, Noche)</td><td>Mañana 08-12</td></tr>
+                        <tr><td class="dictionary-term">Primer Acceso</td><td>Primer inicio de sesión del aprendiz</td><td>Cambio obligatorio de contraseña</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- 11. Conclusiones -->
+            <div id="conclusiones" class="section-manual">
+                <h2><i class="fas fa-check-circle"></i> 11. Conclusiones</h2>
+                <ul style="margin-left: 20px;">
+                    <li>El sistema optimiza el proceso de control de inasistencias, reduciendo tiempos y errores manuales.</li>
+                    <li>La trazabilidad completa permite identificar oportunamente a aprendices con bajo rendimiento.</li>
+                    <li>Los reportes automatizados con formato oficial SENA garantizan el cumplimiento normativo.</li>
+                    <li>La interfaz intuitiva y responsive facilita el uso desde cualquier dispositivo.</li>
+                    <li>El módulo de seguimiento de pendientes evita que los aprendices lleguen al último trimestre con competencias no superadas.</li>
+                </ul>
+            </div>
+
+            <!-- 12. Referencias -->
+            <div id="referencias" class="section-manual">
+                <h2><i class="fas fa-book-open"></i> 12. Referencias</h2>
+                <h3>Bibliografía</h3>
+                <ul style="margin-left: 20px;">
+                    <li>SENA (2021). Programa de Formación: Análisis y Desarrollo de Software. Código 228118, Versión 1.</li>
+                    <li>SENA. Manual de Identidad Corporativa SENA. Resolución 1-01910 de 2022.</li>
+                </ul>
+                <h3>Webgrafía</h3>
+                <ul style="margin-left: 20px;">
+                    <a href="https://www.php.net/docs.php" target="_blank">PHP</a>
+                    <a href="https://dev.mysql.com/doc/" target="_blank">MySQL</a>
+                    <a href="https://fontawesome.com/" target="_blank">Font Awesome</a>
+                </ul>
+            </div>
+
+            <!-- 13. Extras -->
+            <div id="extras" class="section-manual">
+                <h2><i class="fas fa-gift"></i> 13. Extras</h2>
+                <h3>Soporte Técnico</h3>
+                <p>Para soporte técnico, contactar a:</p>
+                <ul>
+                    <li>Email: tomasorregoberrio@gmail.com</li>
+                    <li>Teléfono: (+57) 310 414 2211</li>
+                </ul>
+                <h3>Actualizaciones</h3>
+                <p>El sistema se actualiza periódicamente. Versión actual: 3.0</p>
+                <h3>Glosario de Iconos</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 15px; margin-top: 15px;">
+                    <div><i class="fas fa-plus-circle"></i> Crear nuevo</div>
+                    <div><i class="fas fa-edit"></i> Editar</div>
+                    <div><i class="fas fa-trash"></i> Eliminar</div>
+                    <div><i class="fas fa-eye"></i> Ver detalle</div>
+                    <div><i class="fas fa-download"></i> Descargar</div>
+                    <div><i class="fas fa-print"></i> Imprimir</div>
+                    <div><i class="fas fa-search"></i> Buscar</div>
+                    <div><i class="fas fa-filter"></i> Filtrar</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-manual">
+        <p>Sistema de Control de Inasistencias SENA - Centro de Procesos Industriales y Construcción</p>
+        <p>Manual de Usuario - Versión 3.0 - Abril 2024</p>
+    </div>
+
+    <!-- Botón flotante para subir -->
+    <div class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+</body>
+</html>
